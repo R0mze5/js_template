@@ -1,0 +1,325 @@
+@import 'import/_resolutions.less';
+
+
+/*---------------------------------------------------------------------------*
+ * reset styles
+ *---------------------------------------------------------------------------*/
+
+
+:root{
+    --accent_color: rgb(228, 82, 74);
+    --second_color: rgb(35, 181, 185);
+
+}
+
+
+*{
+    box-sizing: border-box;
+    .RobotoSlab;
+}
+
+body{
+    min-width: 320px !important;
+    margin: 0;  
+}
+
+
+h1, h2, h3, h4, h5, h6, p, ul{
+    margin: 0;
+    line-height: 1;
+    padding: 0;
+}
+
+
+
+
+p, span{
+
+}
+
+
+ul{
+    list-style: none;
+    padding-left: 0px;
+    position: relative;
+}
+
+li{
+
+    &::before{
+        display: block;
+        border-radius: 50%;
+        background-color:  #e4524a;
+        width: 7px;
+        min-width: 7px;
+        height: 7px;
+        min-height: 7px;
+        margin-top: 10px;
+        color: var(--accent_color);
+        margin-left: 0;
+        content: '';
+    }
+}
+
+a, 
+a:hover,
+a:focus,
+a:active,
+a:focus:active{
+    text-decoration: none;
+}
+
+details, summary{
+    display: block;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary{
+  cursor: pointer;
+}
+
+
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/*::-webkit-scrollbar-button {
+background-image:url('');
+background-repeat:no-repeat;
+width:5px;
+height:0px
+}
+
+::-webkit-scrollbar-track {
+background-color:#1d1d1d;
+}
+
+::-webkit-scrollbar-thumb {
+-webkit-border-radius: 0px;
+border-radius: 0px;
+background-color:#2d2d2d;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background-color:#2d2d2d;
+}
+
+::-webkit-resizer{
+background-image:url('');
+background-repeat:no-repeat;
+width:4px;
+height:0px
+}
+
+::-webkit-scrollbar{
+width: 4px;
+}*/
+/*---------------------------------------------------------------------------*
+ * ./reset styles
+ *---------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------------*
+ * keyframes
+ *---------------------------------------------------------------------------*/
+
+@keyframes copyMessage {
+    0% {
+        opacity: 0;
+        display: flex;
+    }
+    1% {
+        opacity: 1;
+        display: flex;
+    }
+
+    15% {
+        opacity: 1;
+        top: -50;
+    }
+
+    100% {
+        top: -90px;
+        opacity: 0;
+    }
+}
+
+
+/*---------------------------------------------------------------------------*
+ * ./keyframes
+ *---------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------*
+ * mixins
+ *---------------------------------------------------------------------------*/
+
+
+
+.bold{
+    font-weight: 700 !important;
+}
+
+
+.RobotoSlab{
+    font-family: RobotoSlab;
+}
+
+.Circe{
+    font-family: Circe;
+}
+/*---------------------------------------------------------------------------*
+ * ./mixins
+ *---------------------------------------------------------------------------*/
+
+/*.preloader{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:#fff;
+    z-index:5;
+    transition:1s all;
+    opacity:1;
+    visibility:visible;
+    display:flex;
+    justify-content:center;
+    align-items:center
+}
+
+.preloader.done{
+    opacity:0;
+    visibility:hidden
+}
+
+.loader{
+    width:75px;
+    height:75px;
+    border:10px solid var(--blue);
+    border-radius:50%;
+    border-top-color:
+    var(--purple);position:
+    absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    animation:1s spin infinite linear
+}
+
+
+.loader.done{
+    opacity:0;
+    visibility:hidden
+}
+
+@keyframes spin{
+    from{
+        transform:translate(-50%,-50%) rotate(0)
+    }
+    to{
+        transform:translate(-50%,-50%) rotate(360deg)
+    }
+}*/
+ /*---------------------------------------------------------------------------*
+ * button
+ *---------------------------------------------------------------------------*/
+
+.button{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    cursor: pointer;
+    height: 52px;
+    .Circe;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    border: 2px solid transparent;
+    transition: transform 0.1s,  background-color 0.3s;
+    padding-top: 4px;
+
+    &:focus,
+    &:active{
+        transform: scale(1.05);
+    }
+
+
+}
+
+.red_btn{
+    border-color:  var(--accent_color);
+    color:  #ffffff;
+    background-color:  var(--accent_color);
+
+    &:hover{
+        color:  var(--accent_color);
+        background-color: transparent;  
+    }
+
+
+    &.transparent{
+        color:  var(--accent_color);
+        background-color: transparent;
+
+        &:hover{
+            color:  #ffffff;
+            background-color: var(--accent_color);  
+        }
+    }
+}
+
+.green_btn{
+    border-color:  var(--second_color);
+    background-color: var(--second_color);
+    color:  #ffffff;
+
+    &:hover{
+        color: var(--second_color);
+        background-color: transparent;  
+    }
+
+    .transparent{
+        border-color:  var(--second_color);
+        color:  var(--second_color);
+        background-color: transparent;
+
+        &:hover{
+            color:  #ffffff;
+            background-color: var(--second_color);  
+        }
+    }
+}
+
+
+
+ /*---------------------------------------------------------------------------*
+ * ./button
+ *---------------------------------------------------------------------------*/
+ /*---------------------------------------------------------------------------*
+ * incluse styles
+ *---------------------------------------------------------------------------*/
+
+@import 'import/header.less';
+@import 'import/footer.less';
+/*@import 'import/modal.less';
+@import 'import/menu.less';*/
+
+/*---------------------------------------------------------------------------*
+ * ./incluse styles
+ *---------------------------------------------------------------------------*/
+

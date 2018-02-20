@@ -1,0 +1,47 @@
+#отладочные журналы npm
+*.log
+
+#зависимости проекта
+node_modules
+
+#Атрибуты папки OSX
+.DS_Store
+
+#Временные файлы
+*.tmp
+*~
+
+#Файлы макетов
+_psd
+
+#все файлы скачиваемых библиотек
+libs
+
+#Папки bitrix
+auth
+bitrix
+search
+upload
+.access.php
+top.menu.php
+auth.php
+favicon.ico
+index_inc.php
+sect_inc.php
+test.php
+
+
+#Содержимое папки local
+local/templates/website/documents
+local/templates/website/images
+local/templates/website/img
+local/templates/website/images
+local/templates/website/page_templates
+local/templates/website/snippets
+local/templates/website/themes
+local/templates/website/videos
+
+#файлы sublime
+ftpsync.settings
+sftp-config.json
+tasks/deploy_configuration.js
